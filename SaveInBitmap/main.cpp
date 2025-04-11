@@ -154,6 +154,7 @@ int write_to_bitmap24(int argc, WCHAR *argv[])
 				i++;
 				j = ((len + 2) / 3) / i;
 				j++;
+				j = (j + 3) & ~3;
 
 				width = j;
 				height = i;
